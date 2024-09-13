@@ -352,6 +352,19 @@ spec:
         operator: in
         values:
         - "false"
+    - name: sast-shellcheck
+      taskRef:
+        resolver: git
+        params:
+         - name: url
+           value: "https://github.com/rhyw/build-definitions"
+         - name: revision
+           value: sast-shellcheck-task
+         - name: pathInRepo
+           value: "task/sast-shellcheck/0.1/sast-shellcheck.yaml"
+      workspaces:
+      - name: workspace
+        workspace: workspace
     - name: ecosystem-cert-preflight-checks
       params:
       - name: image-url
