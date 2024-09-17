@@ -353,6 +353,11 @@ spec:
         values:
         - "false"
     - name: sast-shellcheck
+      params:
+      - name: image-digest
+        value: $(tasks.build-image-index.results.IMAGE_DIGEST)
+      - name: image-url
+        value: $(tasks.build-image-index.results.IMAGE_URL)
       taskRef:
         resolver: git
         params:
