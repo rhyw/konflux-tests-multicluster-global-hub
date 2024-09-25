@@ -361,12 +361,12 @@ spec:
       taskRef:
         resolver: git
         params:
-         - name: url
-           value: "https://github.com/rhyw/build-definitions"
-         - name: revision
-           value: "sast-shell-check"
-         - name: pathInRepo
-           value: "task/sast-shell-check/0.1/sast-shell-check.yaml"
+        - name: url
+          value: https://github.com/rhyw/build-definitions
+        - name: revision
+          value: sast-shell-check
+        - name: pathInRepo
+          value: task/sast-shell-check/0.1/sast-shell-check.yaml
       workspaces:
       - name: workspace
         workspace: workspace
